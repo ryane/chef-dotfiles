@@ -15,7 +15,7 @@ Attributes
     <th>Key</th>
     <th>Type</th>
     <th>Description</th>
-    <th>Default</th>
+    <th>Example</th>
   </tr>
   <tr>
     <td><tt>['dotfiles']['user']</tt></td>
