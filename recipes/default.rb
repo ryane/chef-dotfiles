@@ -79,6 +79,16 @@ bash "run_vundle_install" do
   code "vim -e +BundleInstall +qall || true"
 end
 
+# setup emacs
+git "#{home_dir}/.emacs.d" do
+  repository 'https://github.com/ryane/.emacs.d.git'
+  reference 'master'
+  user node['dotfiles']['user']
+  group node['dotfiles']['group']
+  enable_submodules true
+  action :checkout
+end
+
 # set shell to zsh
 user node['dotfiles']['user'] do
   action :modify
